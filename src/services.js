@@ -4,7 +4,7 @@ import regeneratorRuntime from "regenerator-runtime";
 
 export const getTaxiAvailability = async(dateTime) => {
     try {
-        let formatDateISO = dateTime.split('.')[0]+"Z"
+        let formatDateISO = dateTime.split('.')[0]
         let response = await fetch(GET_TAXI_AVAILABILITY+formatDateISO, {
             method: 'GET',
             headers: {

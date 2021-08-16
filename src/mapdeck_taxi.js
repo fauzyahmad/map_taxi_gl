@@ -13,7 +13,7 @@ export default function MapDeckTaxi({data}) {
         stroked: true,
         filled: true,
         radiusScale: 30,
-        radiusMinPixels: 3,
+        radiusMinPixels: 2,
         radiusMaxPixels: 100,
         getPosition: d => d,
         getFillColor: [255,0,1],

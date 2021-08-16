@@ -1,6 +1,7 @@
 export const initialState = {
     dataTaxi: [],
-    infoTaxi: {},
+    taxiCount: 0,
+    timestamp: '',
 }
 
 const reducer = (state, action) => {
@@ -10,10 +11,15 @@ const reducer = (state, action) => {
                 ...state,
                 dataTaxi: action.payload,
             }
-        case 'SET_INFO_TAXI':
+        case 'SET_TAXI_COUNT':
             return {
                 ...state,
-                infoTaxi: action.payload,
+                taxiCount: action.payload,
+            }
+        case 'SET_TIMESTAMP':
+            return {
+                ...state,
+                timestamp: action.payload,
             }
         default:
             break;

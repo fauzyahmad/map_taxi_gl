@@ -14,6 +14,8 @@ export default function App() {
     let localISOTime = (new Date(Date.now() - tzoffset)).toISOString().slice(0, -1)
     let responseData = await getTaxiAvailability(localISOTime);
     dispatch({type: 'SET_DATA_TAXI', payload: responseData.features[0].geometry.coordinates })
+    dispatch({type: 'SET_TAXI_COUNT', payload: responseData.features[0].properties.taxi_count })
+    dispatch({type: 'SET_TIMESTAMP', payload: responseData.features[0].properties.timestamp })
     setLoading(false)
   }
 

@@ -7,3 +7,11 @@ export let INITIAL_VIEW_STATE = {
     pitch: 0,
     bearing: 0
 };
+
+export const changeLocaleISODate = (dateISO) => {
+    return new Date(dateISO).toLocaleString('en-US', {
+        dateStyle: 'full',
+        timeStyle: 'short',
+        timeZone: 'Asia/Singapore'
+    })
+};
